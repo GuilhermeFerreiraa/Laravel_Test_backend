@@ -16,9 +16,7 @@ class CorsMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $allowedOrigins = [
-            'http://localhost:19000', 'exp://192.168.1.102:19000'
-        ];
+        $allowedOrigins = ['*'];
 
         $origin = $request->header('Origin');
 
